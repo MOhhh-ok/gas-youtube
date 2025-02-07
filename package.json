@@ -1,6 +1,8 @@
 {
   "name": "@masa-dev/gas-youtube",
   "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {
     "@types/google-apps-script": "^1.0.93"
   },
