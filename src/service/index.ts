@@ -50,10 +50,14 @@ export function getPlaylistItemList(
 export function getVideoList(args: {
   part: VideoListPart[];
   id: string[] | string;
-  options: VideoListOption;
+  options?: VideoListOption;
 }): VideoListResponse {
   const { part, id, options } = args;
   const _id = typeof id === 'string' ? [id] : id;
+  console.log(part, {
+    id: _id.join(','),
+    ...options,
+  });
   const response = YouTube.Videos.list(part, {
     id: _id.join(','),
     ...options,
