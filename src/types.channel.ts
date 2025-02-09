@@ -40,7 +40,7 @@ export interface Channel {
   kind: 'youtube#channel';
   etag: string;
   id: string;
-  snippet: {
+  snippet?: {
     title: string;
     description: string;
     customUrl: string;
@@ -59,14 +59,14 @@ export interface Channel {
     };
     country?: string;
   };
-  contentDetails: {
+  contentDetails?: {
     relatedPlaylists: {
       likes: string;
       favorites: string;
       uploads: string;
     };
   };
-  statistics: {
+  statistics?: {
     viewCount: number;
     subscriberCount: number;
     hiddenSubscriberCount: boolean;
@@ -76,7 +76,7 @@ export interface Channel {
     topicIds?: string[];
     topicCategories?: string[];
   };
-  status: {
+  status?: {
     privacyStatus: string;
     isLinked: boolean;
     longUploadsStatus: string;
